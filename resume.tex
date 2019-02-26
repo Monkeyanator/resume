@@ -1,0 +1,223 @@
+% resume.tex
+%
+% (c) 2007-2011 Jeremy B. R. Edberg <jedberg@gmail.com> http://www.jedberg.net
+%
+
+%%%%%%%%%%%%
+% Basic setup
+\documentclass[11pt]{article}
+\usepackage{fullpage}
+\usepackage{setspace}
+\pagestyle{empty}
+\setlength{\tabcolsep}{0in}
+\hyphenchar\font=-1
+\usepackage{geometry} 
+\geometry{a4paper, twoside} 
+\setstretch{1}
+\usepackage{booktabs}
+\usepackage{topcapt}
+%\raggedbottom
+%\raggedright
+\usepackage{tabulary}
+\usepackage{hyphenat}
+%%%%%%%%%%%%
+
+%%%%%%%%%%%%
+% PDF setup
+\usepackage{ifpdf}
+\ifpdf
+  \usepackage[pdftex]{hyperref}
+\else
+  \usepackage[hypertex]{hyperref}
+\fi
+\hypersetup{
+    letterpaper,
+    colorlinks,
+    urlcolor=black,
+    pdfpagemode=none,
+    pdftitle={Resume},
+    pdfauthor={Samuel Naser},
+    pdfsubject={Resume},
+    pdfkeywords={systems, cloud, google}
+}
+%%%%%%%%%%%%
+
+%%%%%%%%%%%%
+% Margin setup
+\oddsidemargin  -0.5in
+\evensidemargin -0.5in
+\textwidth      7.2in
+\headheight     -0.7in
+\topmargin      0.0in
+\textheight=10.7in
+%\footheight 1.0in 
+%%%%%%%%%%%%
+
+\begin{document}
+
+%% Heading
+\begin{center}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcr}
+&\huge{\textbf{\sc{Samuel Naser}}}&\\
+sammnaser@gmail.com &  & Mobile: (502) 415-0878\\
+\hline\hline
+\end{tabular*}
+\end{center}
+
+%% Education
+\noindent
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}}
+\large {\sc {Education}}\\
+\hline
+\end{tabular*}
+
+% Northwestern
+\noindent 
+\\
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+\textbf{Northwestern University} & Evanston, IL \\
+\emph{BS, Computer Science,} 3.88 GPA & \emph{September 2017 to June 2020}
+\end{tabular*}
+{\small
+
+\noindent
+Relevant coursework: Data Structures and Management, Human Computer Interaction, Introduction to Computer Systems, Introduction to Computer Graphics, Machine Learning: Foundations and Algorithms, Operating Systems, Distributed Systems
+}
+
+% Northwestern
+\noindent 
+\\
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+\textbf{University of Louisville} & Louisville, KY \\
+\emph{BS, Computer Science,} 4.0 GPA & \emph{August 2016 to August 2017}
+\end{tabular*}
+{\small
+
+\noindent
+Relevant coursework: Object Oriented Design with Java, Introduction to Programming Languages (C), Data Science, Calculus II, Calculus III, Differential Equations
+}
+
+\vspace{5mm}
+
+%% Experience Section
+\noindent
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}}
+\large {\sc {Work Experience}}\\
+\hline
+\end{tabular*}
+
+% Google
+\noindent 
+\\
+%\\
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+\textbf{Google} & Sunnyvale, CA \\
+\emph{Software Engineering Intern, Cloud Services Platform} & \emph{September 2018 to December 2018} \\
+\end{tabular*}
+{\small
+
+\noindent
+
+\begin{list}{$\bullet$}{
+%\setlength{\itemsep}{ -5pt}
+%\setlength{\partopsep}{ -18pt}
+}
+\item Authored Kubernetes Enhancement Proposal which put forward a model for distributed tracing in Kubernetes
+\item Leveraged the OpenCensus framework to add distributed tracing to Kubernetes object lifecycles; made it possible to visualize these traces in Stackdriver, Zipkin, and various other trace backends
+\item Created mutating admission webhook which injected trace context into Kubernetes objects, and which was adopted as an official sig-instrumentation project
+\item Utilized this custom tracing tooling to isolate bugs in production GKE clusters
+\end{list}
+}
+
+
+% Amino
+\noindent 
+\\
+%\\
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+\textbf{Amino Payments} & Philadelphia, PA \\
+\emph{Software Engineering Intern} & \emph{June 2018 to August 2018} \\
+\end{tabular*}
+{\small
+
+\noindent
+
+\begin{list}{$\bullet$}{
+%\setlength{\itemsep}{ -5pt}
+%\setlength{\partopsep}{ -18pt}
+}
+\item Processed high-throughput advertisement transaction data with Apache Kafka and Apache Samza, reassembled the digital transaction chain in real-time
+\item Migrated from JSON to redesigned Apache Avro models at each step of our Java backend, dramatically reduced the size of our codebase with this refactor
+\item Developed and maintained critical Python utilities which transform output from our data pipeline into a format usable by our API, configured CircleCI test environment and wrote integration tests for these utilities
+\end{list}
+}
+
+
+%% Research experience
+\noindent
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}}
+\large {\sc {Research Background}}\\
+\hline
+\end{tabular*}
+
+% DTR Lab
+\noindent 
+\\
+%\\
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+\textbf{Design, Technology, and Research (DTR) Lab} & Northwestern University \\
+\emph{Undergraduate Researcher} & \emph{January 2018 to Now} \\
+\end{tabular*}
+{\small
+
+\noindent
+
+\begin{list}{$\bullet$}{
+%\setlength{\itemsep}{ -5pt}
+%\setlength{\partopsep}{ -18pt}
+}
+\item Pioneering systems that allow users to contribute to physical tasks, such as picking up packages or delivering food, without disrupting their existing routines
+\item Leverage Node.js, Swift, and MongoDB to implement an application stack that allows users to post food order requests, and intelligently notifies users passing restaurants to pick up the order if it's conveniently on their route
+\end{list}
+}
+
+
+% Knowledge Discovery and Web Mining Lab
+\noindent 
+\\
+%\\
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+\textbf{Knowledge Discovery and Web Mining Lab} & Louisville, KY \\
+\emph{Undergraduate Researcher} & \emph{November 2016 to August 2017} \\
+\end{tabular*}
+{\small
+
+\noindent
+
+\begin{list}{$\bullet$}{
+%\setlength{\itemsep}{ -5pt}
+%\setlength{\partopsep}{ -18pt}
+}
+
+\item Implemented novel recommendation engine with Python and the Django framework that analyzed user news consumption patterns and recommended articles which negated political biases
+\item Designed and implemented mobile and web interfaces for user studies using Typescript and Angular with the Ionic cross-platform framework to collect data and test models
+
+\end{list}
+}
+
+%% Selected Projects
+\noindent
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}}
+\large {\sc {Selected Projects}}\\
+\hline
+\end{tabular*}
+
+
+\noindent 
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+	\textbf{Slackdog} -- \emph{Real-time analytics platform for the Slack messaging service} & Philadelphia, PA \\
+\textbf{FareShare} -- \emph{Platform which enabled users coordinate to split ride-share costs} & Evanston, IL \\
+\textbf{The Glass Capitol} -- \emph{Political site connecting citizens directly to their representatives} & Louisville, KY  \\
+\end{tabular*}
+
+\end{document}
