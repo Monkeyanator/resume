@@ -19,23 +19,17 @@
 %\raggedbottom
 %\raggedright
 \usepackage{tabulary}
-\usepackage{hyphenat}
 %%%%%%%%%%%%
 
 %%%%%%%%%%%%
 % PDF setup
-\usepackage{ifpdf}
-\ifpdf
-  \usepackage[pdftex]{hyperref}
-\else
-  \usepackage[hypertex]{hyperref}
-\fi
+\usepackage{hyperref}
 \hypersetup{
     letterpaper,
     colorlinks,
     urlcolor=black,
     pdfpagemode=none,
-    pdftitle={Resume},
+    pdftitle={samuel_naser_resume},
     pdfauthor={Samuel Naser},
     pdfsubject={Resume},
     pdfkeywords={systems, cloud, google}
@@ -50,7 +44,6 @@
 \headheight     -0.7in
 \topmargin      0.0in
 \textheight=10.7in
-%\footheight 1.0in 
 %%%%%%%%%%%%
 
 \begin{document}
@@ -122,10 +115,10 @@ Relevant coursework: Object Oriented Design with Java, Introduction to Programmi
 %\setlength{\itemsep}{ -5pt}
 %\setlength{\partopsep}{ -18pt}
 }
-\item Authored Kubernetes Enhancement Proposal which put forward a model for distributed tracing in Kubernetes
 \item Leveraged the OpenCensus framework to add distributed tracing to Kubernetes object lifecycles; made it possible to visualize these traces in Stackdriver, Zipkin, and various other trace backends
-\item Created mutating admission webhook which injected trace context into Kubernetes objects, and which was adopted as an official sig-instrumentation project
-\item Utilized this custom tracing tooling to isolate bugs in production GKE clusters
+\item Authored Kubernetes Enhancement Proposal (KEP) which put forward a model for distributed tracing in Kubernetes (titled \emph{"Leveraging Distributed Tracing to Understand Kubernetes Object Lifecycles"})
+\item Created mutating admission webhook which injects trace context into Kubernetes objects, and which was adopted as an official sig-instrumentation project
+\item Utilized this custom trace tooling to isolate bugs in production Google Kubernetes Engine (GKE) clusters
 \end{list}
 }
 
@@ -146,9 +139,9 @@ Relevant coursework: Object Oriented Design with Java, Introduction to Programmi
 %\setlength{\itemsep}{ -5pt}
 %\setlength{\partopsep}{ -18pt}
 }
-\item Processed high-throughput advertisement transaction data with Apache Kafka and Apache Samza, reassembled the digital transaction chain in real-time
-\item Migrated from JSON to redesigned Apache Avro models at each step of our Java backend, dramatically reduced the size of our codebase with this refactor
-\item Developed and maintained critical Python utilities which transform output from our data pipeline into a format usable by our API, configured CircleCI test environment and wrote integration tests for these utilities
+\item Processed high-throughput advertisement transaction data with Apache Kafka and Apache Samza, reassembled the digital transaction chain in real-time, deployed data-streaming backend onto AWS infrastructure
+\item Migrated from JSON to redesigned Apache Avro models at each step of our Java data-streaming backend, dramatically increased message processing speeds and improved code structure with this refactor
+\item Developed and maintained critical Python utilities which transformed outputs from our data pipeline into a format usable by our API, configured CircleCI test containers and wrote integration tests for these utilities
 \end{list}
 }
 
@@ -176,7 +169,7 @@ Relevant coursework: Object Oriented Design with Java, Introduction to Programmi
 %\setlength{\itemsep}{ -5pt}
 %\setlength{\partopsep}{ -18pt}
 }
-\item Pioneering systems that allow users to contribute to physical tasks, such as picking up packages or delivering food, without disrupting their existing routines
+\item Pioneering systems that allow users to contribute to physical tasks, such as picking up packages or delivering food, with minimal disruption to their existing routines
 \item Leverage Node.js, Swift, and MongoDB to implement an application stack that allows users to post food order requests, and intelligently notifies users passing restaurants to pick up the order if it's conveniently on their route
 \end{list}
 }
@@ -199,8 +192,8 @@ Relevant coursework: Object Oriented Design with Java, Introduction to Programmi
 %\setlength{\partopsep}{ -18pt}
 }
 
-\item Implemented novel recommendation engine with Python and the Django framework that analyzed user news consumption patterns and recommended articles which negated political biases
-\item Designed and implemented mobile and web interfaces for user studies using Typescript and Angular with the Ionic cross-platform framework to collect data and test models
+\item Implemented novel recommendation engine in Python with the Django framework that analyzed user news consumption patterns and recommended articles which negated political biases
+\item Designed and implemented mobile and web interfaces for user studies using Typescript and AngularJS with the Ionic cross-platform framework to collect data and test models
 
 \end{list}
 }
