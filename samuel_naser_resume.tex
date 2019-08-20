@@ -52,7 +52,7 @@
 \begin{center}
 \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcr}
 &\huge{\textbf{\sc{Samuel Naser}}}&\\
-sammnaser@gmail.com &  & Mobile: (502) 415-0878\\
+sammnaser@gmail.com & github.com/Monkeyanator & (502) 415-0878\\
 \hline\hline
 \end{tabular*}
 \end{center}
@@ -69,20 +69,20 @@ sammnaser@gmail.com &  & Mobile: (502) 415-0878\\
 \\
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
 \textbf{Northwestern University} & Evanston, IL \\
-\emph{BS, Computer Science,} 3.88 GPA & \emph{September 2017 to June 2020}
+\emph{BS, Computer Science,} 3.900 GPA & \emph{September 2017 to June 2020}
 \end{tabular*}
 {\small
 
 \noindent
-Relevant coursework: Data Structures and Management, Human Computer Interaction, Introduction to Computer Systems, Introduction to Computer Graphics, Machine Learning: Foundations and Algorithms, Operating Systems, Distributed Systems
+Relevant coursework: Data Structures and Management, Human Computer Interaction, Introduction to Computer Systems, Introduction to Computer Graphics, Machine Learning: Foundations and Algorithms, Operating Systems, Distributed Systems, Database Systems
 }
 
-% Northwestern
+% UofL
 \noindent 
 \\
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
 \textbf{University of Louisville} & Louisville, KY \\
-\emph{BS, Computer Science,} 4.0 GPA & \emph{August 2016 to August 2017}
+\emph{BS, Computer Science,} 4.000 GPA & \emph{August 2016 to August 2017}
 \end{tabular*}
 {\small
 
@@ -105,7 +105,7 @@ Relevant coursework: Object Oriented Design with Java, Introduction to Programmi
 %\\
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
 \textbf{Google} & Sunnyvale, CA \\
-\emph{Software Engineering Intern, Cloud Services Platform} & \emph{September 2018 to December 2018} \\
+\emph{Software Engineering Intern, Cloud, Istio Security Team} & \emph{June 2019 to September 2019} \\
 \end{tabular*}
 {\small
 
@@ -115,10 +115,55 @@ Relevant coursework: Object Oriented Design with Java, Introduction to Programmi
 %\setlength{\itemsep}{ -5pt}
 %\setlength{\partopsep}{ -18pt}
 }
-\item Leveraged the OpenCensus framework to add distributed tracing to Kubernetes object lifecycles; made it possible to visualize these traces in Stackdriver, Zipkin, and various other trace backends
-\item Authored Kubernetes Enhancement Proposal (KEP) which put forward a model for distributed tracing in Kubernetes (titled \emph{"Leveraging Distributed Tracing to Understand Kubernetes Object Lifecycles"})
+\item Authored design proposal for and implemented Istio feature that reworked the mechanism through which Citadel (cluster component which enables service-to-service and end-user authentication) targets active namespaces
+\item Implemented feature which allowed Istio Gateways (ingress and egress points for Istio mesh traffic) to communicate over encrypted connections with internal workloads through Envoy's Secret Discovery Service (SDS)
+\item Implemented a debug endpoint for the Istio nodeagent (critical component for SDS) to prepare for the full rewrite of the \emph{``istioctl proxy-status''} command
+\item Created and tested the default Grafana dashboard for visualizing Citadel metrics, contributed to Istio's migration from Prometheus to OpenCensus metrics
+\end{list}
+}
+
+% Belvedere Trading
+\noindent 
+\\
+%\\
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+\textbf{Belvedere Trading} & Chicago, IL \\
+\emph{Software Engineering Intern} & \emph{January 2019 to March 2019} \\
+\end{tabular*}
+{\small
+
+\noindent
+
+\begin{list}{$\bullet$}{
+%\setlength{\itemsep}{ -5pt}
+%\setlength{\partopsep}{ -18pt}
+}
+\item Designed and implemented application which enabled traders to toggle which strike prices should be evaluated in our internal pricing engine, now in active use through all trading teams across the firm
+\item Spearheaded effort to Dockerize web-team applications, created internal base image with core dependencies for other teams to base their images on
+\item Created full stack web application with which traders and tech leads were able to communicate with one another through posting, voting, and commenting on project proposals
+\end{list}
+}
+
+% Google
+\noindent 
+\\
+%\\
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+\textbf{Google} & Sunnyvale, CA \\
+\emph{Software Engineering Intern, Cloud, Kubernetes Node Team} & \emph{September 2018 to December 2018} \\
+\end{tabular*}
+{\small
+
+\noindent
+
+\begin{list}{$\bullet$}{
+%\setlength{\itemsep}{ -5pt}
+%\setlength{\partopsep}{ -18pt}
+}
+\item Leveraged the OpenCensus framework to add distributed tracing to Kubernetes object lifecycles, made it possible to visualize these traces in Stackdriver, Zipkin, and various other tracing backends
+\item Authored Kubernetes Enhancement Proposal which introduced a model for distributed tracing in Kubernetes (titled \emph{``Leveraging Distributed Tracing to Understand Kubernetes Object Lifecycles''})
 \item Created mutating admission webhook which injects trace context into Kubernetes objects, and which was adopted as an official sig-instrumentation project
-\item Utilized this custom trace tooling to isolate bugs in production Google Kubernetes Engine (GKE) clusters
+\item Utilized this custom trace tooling to isolate bugs in production Google Kubernetes Engine clusters
 \end{list}
 }
 
@@ -139,9 +184,9 @@ Relevant coursework: Object Oriented Design with Java, Introduction to Programmi
 %\setlength{\itemsep}{ -5pt}
 %\setlength{\partopsep}{ -18pt}
 }
-\item Processed high-throughput advertisement transaction data with Apache Kafka and Apache Samza, reassembled the digital transaction chain in real-time, deployed data-streaming backend onto AWS infrastructure
-\item Migrated from JSON to redesigned Apache Avro models at each step of our Java data-streaming backend, dramatically increased message processing speeds and improved code structure with this refactor
-\item Developed and maintained critical Python utilities which transformed outputs from our data pipeline into a format usable by our API, configured CircleCI test containers and wrote integration tests for these utilities
+\item Processed high-throughput advertisement transaction data using Apache Kafka and Apache Samza, reassembled the digital transaction chain in real-time, deployed data-streaming backend onto AWS infrastructure
+\item Migrated from JSON to redesigned Apache Avro models at each step of our Java data-streaming backend, dramatically increased message transmission speeds and improved code structure with this refactor
+\item Developed and maintained critical Python utilities which transformed outputs from our data pipeline into a format usable by our API, configured CircleCI test environment and wrote integration tests for these utilities
 \end{list}
 }
 
@@ -159,7 +204,7 @@ Relevant coursework: Object Oriented Design with Java, Introduction to Programmi
 %\\
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
 \textbf{Design, Technology, and Research (DTR) Lab} & Northwestern University \\
-\emph{Undergraduate Researcher} & \emph{January 2018 to Now} \\
+\emph{Undergraduate Researcher} & \emph{January 2018 to June 2018} \\
 \end{tabular*}
 {\small
 
@@ -169,8 +214,8 @@ Relevant coursework: Object Oriented Design with Java, Introduction to Programmi
 %\setlength{\itemsep}{ -5pt}
 %\setlength{\partopsep}{ -18pt}
 }
-\item Pioneering systems that allow users to contribute to physical tasks, such as picking up packages or delivering food, with minimal disruption to their existing routines
-\item Leverage Node.js, Swift, and MongoDB to implement an application stack that allows users to post food order requests, and intelligently notifies users passing restaurants to pick up the order if it's conveniently on their route
+\item Pioneered systems that allowed users to contribute to physical tasks, such as picking up packages or delivering food, with minimal disruption to their existing routines. Researched incentive structures for unpaid user-contributions to non-monetized community platforms
+\item Leveraged Node.js, Swift, and MongoDB to implement an application stack that allowed users to post food order requests, and intelligently notified users passing restaurants to pick up the order if it's conveniently on their route
 \end{list}
 }
 
@@ -197,20 +242,5 @@ Relevant coursework: Object Oriented Design with Java, Introduction to Programmi
 
 \end{list}
 }
-
-%% Selected Projects
-\noindent
-\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}}
-\large {\sc {Selected Projects}}\\
-\hline
-\end{tabular*}
-
-
-\noindent 
-\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-	\textbf{Slackdog} -- \emph{Real-time analytics platform for the Slack messaging service} & Philadelphia, PA \\
-\textbf{FareShare} -- \emph{Platform which enabled users coordinate to split ride-share costs} & Evanston, IL \\
-\textbf{The Glass Capitol} -- \emph{Political site connecting citizens directly to their representatives} & Louisville, KY  \\
-\end{tabular*}
 
 \end{document}
