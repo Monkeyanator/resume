@@ -115,9 +115,10 @@ Relevant coursework: Object Oriented Design with Java, Introduction to Programmi
 %\setlength{\itemsep}{ -5pt}
 %\setlength{\partopsep}{ -18pt}
 }
-\item Authored design proposal for and implemented Istio feature that reworked the mechanism through which Citadel (cluster component which enables service-to-service and end-user authentication) targets active namespaces
-\item Implemented feature which allowed Istio Gateways (ingress and egress points for Istio mesh traffic) to communicate over encrypted connections with internal workloads through Envoy's Secret Discovery Service (SDS)
-\item Implemented a debug endpoint for the Istio nodeagent (critical component for SDS) as part of the full rewrite of the \emph{``istioctl proxy-status''} command
+\item Authored design proposal for and implemented Istio feature that reworked the mechanism through which Citadel (cluster component which enables service-to-service and end-user authentication) targets namespaces
+\item Implemented feature which allowed Istio Gateways (ingress and egress points for Istio mesh traffic) to communicate over encrypted connections with and enforce policies for internal workloads with Istio's Secret Discovery Service (SDS) mode enabled
+\item Implemented debug endpoint for the Citadel node agent (critical component for SDS)
+\item Designed and implemented subcommand for \emph{``istioctl proxy-status''} which compared the active secrets on an Envoy sidecar with the secrets active on its Citadel node agent, created the \emph{``istioctl proxy-config secret''} command to examine active Envoy sidecar secrets
 \item Created and tested the default Grafana dashboard for visualizing Citadel metrics, contributed to Istio's migration from Prometheus to OpenCensus metrics
 \end{list}
 }
@@ -138,7 +139,7 @@ Relevant coursework: Object Oriented Design with Java, Introduction to Programmi
 %\setlength{\itemsep}{ -5pt}
 %\setlength{\partopsep}{ -18pt}
 }
-\item Designed and implemented application which enabled traders to toggle which strike prices should be evaluated in our internal pricing engine, now in active use through all trading teams across the firm
+\item Designed and implemented application which enabled traders to toggle which strike prices should be evaluated in our internal option pricing engine, now in active use through all trading teams across the firm
 \item Spearheaded effort to Dockerize web-team applications, created internal base image with core dependencies for other teams to base their images on
 \item Created full stack web application with which traders and tech leads were able to communicate with one another through posting, voting, and commenting on project proposals
 \end{list}
@@ -163,11 +164,11 @@ Relevant coursework: Object Oriented Design with Java, Introduction to Programmi
 \item Leveraged the OpenCensus framework to add distributed tracing to Kubernetes object lifecycles, made it possible to visualize these traces in Stackdriver, Zipkin, and various other tracing backends
 \item Authored Kubernetes Enhancement Proposal which introduced a model for distributed tracing in Kubernetes (titled \emph{``Leveraging Distributed Tracing to Understand Kubernetes Object Lifecycles''})
 \item Created mutating admission webhook which injects trace context into Kubernetes objects, and which was adopted as an official sig-instrumentation project
-\item Utilized this custom trace tooling to isolate bugs in production Google Kubernetes Engine clusters
+\item Utilized the custom trace tooling I created to isolate bugs in production Google Kubernetes Engine clusters
 \end{list}
 }
 
-
+\pagebreak
 % Amino
 \noindent 
 \\
