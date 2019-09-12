@@ -115,11 +115,10 @@ Relevant coursework: Object Oriented Design with Java, Introduction to Programmi
 %\setlength{\itemsep}{ -5pt}
 %\setlength{\partopsep}{ -18pt}
 }
-\item Authored design proposal for and implemented Istio feature that reworked the mechanism through which Citadel (cluster component which enables service-to-service and end-user authentication) targets namespaces
-\item Implemented feature which allowed Istio Gateways (ingress and egress points for Istio mesh traffic) to communicate over encrypted connections with and enforce policies for internal workloads with Istio's Secret Discovery Service (SDS) mode enabled
-\item Implemented debug endpoint for the Citadel node agent (critical component for SDS)
-\item Designed and implemented subcommand for \emph{``istioctl proxy-status''} which compared the active secrets on an Envoy sidecar with the secrets active on its Citadel node agent, created the \emph{``istioctl proxy-config secret''} command to examine active Envoy sidecar secrets
-\item Created and tested the default Grafana dashboard for visualizing Citadel metrics, contributed to Istio's migration from Prometheus to OpenCensus metrics
+\item Authored design proposal for and implemented Istio feature that reworked the mechanism through which Citadel (the control-plane component responsible for certificate issuance and rotation) targets namespaces 
+\item Implemented TLS mode that allowed Istio Gateways (ingress and egress points for Istio mesh traffic) to communicate over encrypted connections with and enforce policies for internal workloads with Istio's Secret Discovery Service (SDS) mode enabled. SDS mode allows Istio to provision encryption keys and certificates in-memory rather than mounting them to a file system
+\item Designed and implemented subcommand for \emph{istioctl proxy-status} which compared the active secrets on an Envoy sidecar with the secrets active on its Citadel node agent (authored debug endpoint for the agent which made this possible). Created the \emph{istioctl proxy-config secret} command to examine active Envoy sidecar secrets 
+\item Created and tested the default Grafana dashboard for visualizing Citadel metrics, contributed to Istio's migration from Prometheus to OpenCensus metrics. Made metrics collected in the Citadel node agent accessible from Prometheus
 \end{list}
 }
 
